@@ -1,10 +1,10 @@
 # APM-project
 # hello!
-Mengying Yu
-Shuyuan Sun
-Wanxue Dong
-Rachel Rong
-Wenying Hu
+Mengying Yu  
+Shuyuan Sun  
+Wanxue Dong  
+Rachel Rong  
+Wenying Hu  
 
 
 Zi high
