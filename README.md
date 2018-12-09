@@ -7,4 +7,3 @@ Rachel Rong
 Wenying Hu  
 
 
-Zi high
