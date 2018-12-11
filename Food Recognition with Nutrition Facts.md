@@ -64,9 +64,20 @@
 ### Plots and figures
 
 ## Conclusion
+
+
+
 ### Summarize everything above
+
+
+
 ### Lessons learned
+
+
+
 ### Future work - continuations or improvements
+
+
 
 ## References
 
