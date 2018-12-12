@@ -14,6 +14,7 @@
   
   Sometimes delicious food can be satisfactory, while it could become a barrier to establish healthy dietary habits.          Traditional way to know about the nutrition from the food is to search the name from a database. The main goal of our project, however, aims to design a more convenient way to let people understand the nutrition fact from what they eat. Imagine how convenient when you just take a picture from your phone, and it will recognize the food and return the nutrition fact from the picture. 
   - Related work
+  
   There are several papers that use the same dataset as ours—food 101. The following papers and blogs were able to achieve certain accuracy based on CNN or Random Forest. 
   
   Inception-ResNet (full layer training) 72.55% Accuracy:
@@ -24,7 +25,14 @@
   
   https://link.springer.com/chapter/10.1007/978-3-319-10599-4_29
   - Outline of approach and rationale (high level)
+    -Data preprocessing 
+    -Train AlexNet
+    -Model modifications
+    -Obtain FatSecret API
+    -Model Evaluations
   - Contributions or novel characteristics of project
+  
+  One of the novelties of our project is that recognized food picture is associated with a food ID from the FatSecret database. We then wrote a python code linking this food ID to the database in the FatSecret in order to get the nutrition fact from the recognized picture.  
 - [Data Collection and Description](#data-collection-and-description)
   - Relevant Characteristics
   - Source(s)
