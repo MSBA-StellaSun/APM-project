@@ -276,7 +276,7 @@ def prepare_data(dataset, labels_map):
         labels[p, labels_map[i.split("/")[0]]] = 1
     return images, labels
 ```
-  Then we write the main function to link all the defined functions above for us to prepare the train/test data into npy files. Besides, we also randomly shuffle the images at first, otherwise the images would be by categories in alphabetical order, which will adversly influence our model fitting.
+  Then we write the main function to link all the defined functions above for us to prepare the train/test data into npy files. Besides, we also randomly shuffle the images at first, otherwise the images would be by categories in alphabetical order, which will adversely influence our model fitting.
 ```Python
 # preprocess all data into npy format.
 def process_data(dataset_name):
