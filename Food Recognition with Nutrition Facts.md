@@ -13,6 +13,7 @@
   - Project Goal and Why we care
   
 Sometimes delicious food can be satisfactory, while it could become a barrier to establish healthy dietary habits.          Traditional way to know about the nutrition from the food is to search the name from a database. The main goal of our project, however, aims to design a more convenient way to let people understand the nutrition fact from what they eat. Imagine how convenient when you just take a picture from your phone, and it will recognize the food and return the nutrition fact from the picture. 
+
   - Related work
   
 There are several papers that use the same dataset as ours—food 101. The following papers and blogs were able to achieve certain accuracy based on CNN or Random Forest. 
