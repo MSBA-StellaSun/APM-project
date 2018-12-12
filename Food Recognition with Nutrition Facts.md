@@ -205,7 +205,9 @@ plt.tight_layout(rect=[0, 0.03, 1, 0.95])
   <p align="center">
   <img src="https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/EDA.png">
   </p>
-  The [EDA](/example/profile.md)	
+  
+  The data exploration python code is uploaded [here](https://github.com/MSBA-StellaSun/APM-project/blob/master/EDA.py).
+  
 ### Feature engineering/selection
 
   First we import the packages needed:
@@ -302,6 +304,8 @@ if __name__ == "__main__":
   <p align="center">
   <img src="https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/ynpy.png">
   </p>
+  
+  The data preprocessing python code is uploaded [here](https://github.com/MSBA-StellaSun/APM-project/blob/master/preprocessing.py).
   
 ## 5. Learning/Modeling
 ### Chosen models and why
