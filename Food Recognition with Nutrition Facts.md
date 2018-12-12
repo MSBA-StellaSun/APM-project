@@ -11,28 +11,9 @@
 - [Abstract](#abstract)
 - [Introduction and Background](#introduction-and-background)
   - Project Goal and Why we care
-  
-  Sometimes delicious food can be satisfactory, while it could become a barrier to establish healthy dietary habits.          Traditional way to know about the nutrition from the food is to search the name from a database. The main goal of our project, however, aims to design a more convenient way to let people understand the nutrition fact from what they eat. Imagine how convenient when you just take a picture from your phone, and it will recognize the food and return the nutrition fact from the picture. 
   - Related work
-  
-  There are several papers that use the same dataset as ours—food 101. The following papers and blogs were able to achieve certain accuracy based on CNN or Random Forest. 
-  
-  Inception-ResNet (full layer training) 72.55% Accuracy:
-  
-  https://pdfs.semanticscholar.org/6dbb/4f5a00f81971b7bc45f670f3706071a9db20.pdf
-  
-  Random Forest 50.76% Accuracy:
-  
-  https://link.springer.com/chapter/10.1007/978-3-319-10599-4_29
   - Outline of approach and rationale (high level)
-    -Data preprocessing 
-    -Train AlexNet
-    -Model modifications
-    -Obtain FatSecret API
-    -Model Evaluations
   - Contributions or novel characteristics of project
-  
-  One of the novelties of our project is that recognized food picture is associated with a food ID from the FatSecret database. We then wrote a python code linking this food ID to the database in the FatSecret in order to get the nutrition fact from the recognized picture.  
 - [Data Collection and Description](#data-collection-and-description)
   - Relevant Characteristics
   - Source(s)
@@ -58,10 +39,31 @@
 ## Abstract
 
 ## Introduction and Background
-### Problem being addressed and why it’s important
+### Project Goal and Why We Care
+
+Sometimes delicious food can be satisfactory, while it could become a barrier to establish healthy dietary habits.          Traditional way to know about the nutrition from the food is to search the name from a database. The main goal of our project, however, aims to design a more convenient way to let people understand the nutrition fact from what they eat. Imagine how convenient when you just take a picture from your phone, and it will recognize the food and return the nutrition fact from the picture. 
+
 ### Related work
+
+There are several papers that use the same dataset as ours—food 101. The following papers and blogs were able to achieve certain accuracy based on CNN or Random Forest. 
+  
+Inception-ResNet (full layer training) 72.55% Accuracy:
+  
+https://pdfs.semanticscholar.org/6dbb/4f5a00f81971b7bc45f670f3706071a9db20.pdf
+  
+Random Forest 50.76% Accuracy:
+  
+https://link.springer.com/chapter/10.1007/978-3-319-10599-4_29
+
 ### Outline of approach and rationale (high level)
+    -Data preprocessing 
+    -Train AlexNet
+    -Model modifications
+    -Obtain FatSecret API
+    -Model Evaluations
 ### Contributions or novel characteristics of project
+
+One of the novelties of our project is that recognized food picture is associated with a food ID from the FatSecret database. We then wrote a python code linking this food ID to the database in the FatSecret in order to get the nutrition fact from the recognized picture.  
 
 ## Data Collection and Description
 ### Relevant Characteristics
@@ -94,10 +96,7 @@ We aggregated image data from Food 101 dataset and made image pre-processing to 
 ### Future work - continuations or improvements
 
 Ensemble learning algorithm can be used for future work. Ensemble method combines multiple models to obtain better predictive performance. 
-
 Other architectures of convolutional networks, such as ResNet and VGG, can be applied in the future. ResNet makes use of Residual module and make it easier for network layers to represent the identity mapping. So ResNet have more layers and is able to go deeper but takes much more time. Compared to AlexNet, VGG uses multiple stacked smaller size kernel. These non-linear layers help increase the depth of the network, which enables the VGG to learn more complex features with a lower cost. Thus, VGG performs well on image feature extraction.
-
-This project can help recognize the food class from an image and therefore can be applied to many practical situations. When a person who is keeping on diet wants to eat something and has no idea about the amount of calorie he or she will take after eating it, he or she can take a picture of the food, input the image into our model and then a nutrition information will pop up after the model recognizes the image. The model can also be helpful for people who have special nutrition needs and want to learn what nutrition they can obtain from the food. Moreover, with the nutrition facts of the food class, recipe recommendation can also be realized for future work.
 
 ## References
 
