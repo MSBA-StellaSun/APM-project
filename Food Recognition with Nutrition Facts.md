@@ -70,7 +70,7 @@ One of the novelties of our project is that recognized food picture is associate
 
 ### Source
 
-We obtained our data from the original paper using random forest (2014) [here](https://www.vision.ee.ethz.ch/datasets_extra/food-101/ "data source"). 
+  We obtained our data from the original paper using random forest (2014) [here](https://www.vision.ee.ethz.ch/datasets_extra/food-101/ "data source"). 
   
 ```
 @inproceedings{bossard14,
@@ -80,32 +80,46 @@ We obtained our data from the original paper using random forest (2014) [here](h
   year = {2014}
 }
 ```
-  
-We use this dataset because it can be downloaded directly. Also, this dataset is quite large for us to lower the variance and train a better model.  
+  We use this dataset because it can be downloaded directly. Also, this dataset is quite large for us to lower the variance and train a better model.
 
 ### Methods of acquisition
 
-Since the dataset is publicly available from the website, we simply downloaded the dataset and then unzipped it into our laptops.  
+  Since the dataset is publicly available from the website, we simply downloaded the dataset and then unzipped it into our laptops.  
 The unzipped dataset contains two folders:  
 ```
 images
 meta
 ```
-Images can be found in the "images" folder and are organized per class.
-![categories](https://github.com/MSBA-StellaSun/APM-project/data/categories.png)  
-
-There are also two txt files providing some instructions on the use of this dataset:  
+  Images can be found in the "images" folder and are organized per class.
+  ```
+  ![categories](https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/categories.png)
+  ```
+  For example, in the folder "apple_pie", we can see images of apple pie:
+  ```
+  ![sampleimg](https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/sampleimg.png)
+  ```
+  All image IDs are unique and correspond to the foodspotting.com review IDs. Thus the original articles can retrieved trough [foodspotting](http://www.foodspotting.com/reviews) or through the [foodspotting api](http://www.foodspotting.com/api).
+  The class labels and test/train splitting used in the experiment can be found in the "meta" directory:
+  ```
+  ![metafile](https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/metafile.png)
+  ```
+  The class labels of the images under different categories are like this:
+  ```
+  ![classlabel](https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/classlabel.png)
+  ```
+  The train set IDs are like this:
+  ```
+  ![trainlabel](https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/trainlabel.png)
+  ```
+  And the test set IDs are the rest of those IDs:
+  ```
+  ![testlabel](https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/testlabel.png)
+  ```
+  There are also two txt files providing some instructions on the use of this dataset:
 ```
 license_agreement.txt
 README.txt
 ```
- 
-All image IDs are unique and correspond to the foodspotting.com review IDs. Thus the original articles can retrieved trough
-  http://www.foodspotting.com/reviews/<image_id> or through the foodspotting api (http://www.foodspotting.com/api).
-
-The test/train splitting used in the experiment can be found in
-the "meta" directory.
-
 
 ### Relevant Characteristics
 
