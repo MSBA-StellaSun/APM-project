@@ -18,7 +18,7 @@
   - Source
   - Methods of acquisition
   - Relevant Characteristics
-- [Data Preprocessing and Exploration](#data-preprocessing-and-exploration)
+- [Data Exploration and Preprocessing](#data-exploration-and-preprocessing)
   - Feature engineering/selection
   - Relevant Plots
 - Learning/Modeling
@@ -62,6 +62,7 @@ https://link.springer.com/chapter/10.1007/978-3-319-10599-4_29
     - Model modifications
     - Obtain FatSecret API
     - Model Evaluations
+  
 ### Contributions or novel characteristics of project
 
 One of the novelties of our project is that recognized food picture is associated with a food ID from the FatSecret database. We then wrote a python code linking this food ID to the database in the FatSecret in order to get the nutrition fact from the recognized picture.  
@@ -70,7 +71,7 @@ One of the novelties of our project is that recognized food picture is associate
 
 ### Source
 
-  We obtained our data from the original paper using random forest (2014) [here](https://www.vision.ee.ethz.ch/datasets_extra/food-101/ "data source"). 
+  We obtained our data from the original paper using random forest (2014) [linkhere](https://www.vision.ee.ethz.ch/datasets_extra/food-101/). 
   
 ```
 @inproceedings{bossard14,
@@ -84,8 +85,8 @@ One of the novelties of our project is that recognized food picture is associate
 
 ### Methods of acquisition
 
-  Since the dataset is publicly available from the website, we simply downloaded the dataset and then unzipped it into our laptops.  
-The unzipped dataset contains two folders:  
+  Since the dataset is publicly available from the website [downloadhere](http://data.vision.ee.ethz.ch/cvl/food-101.tar.gz), we simply downloaded the dataset and then unzipped it into our laptops.
+  The unzipped dataset contains two folders:  
 ```
 images
 meta
@@ -102,7 +103,7 @@ meta
   <img src="https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/sampleimg.png">
   </p>
   
-  All image IDs are unique and correspond to the foodspotting.com review IDs. Thus the original articles can retrieved trough [foodspotting](http://www.foodspotting.com/reviews) or through the [foodspotting api](http://www.foodspotting.com/api).
+  All image IDs are unique and correspond to the foodspotting.com review IDs. Thus the original articles can retrieved trough [foodspotting](http://www.foodspotting.com/reviews) or through the [foodspotting api](http://www.foodspotting.com/api).  
   The class labels and test/train splitting used in the experiment can be found in the "meta" directory:
   
   <p align="center">
@@ -135,10 +136,16 @@ README.txt
 
 ### Relevant Characteristics
 
-## 4. Data Preprocessing and Exploration
+  There are 101 food categories in total in our dataset, each with 1000 images. 750 of them in each category are training images and the rest 250 are testing images. 
+  All images were originally rescaled to have a maximum side length of 512 pixels.
+  This dataset is also said to have some amount of noises on purpose to reflect real-world situations. For example, there is an image of iPad under the food category "apple_pie". So the noises may add some difficulties for us to train the model.
+  
+## 4. Data Exploration and Preprocessing
 
-### Feature engineering/selection
 ### Relevant Plots
+
+  
+### Feature engineering/selection
 
 ## 5. Learning/Modeling
 ### Chosen models and why
