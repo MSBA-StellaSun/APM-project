@@ -91,18 +91,42 @@ images
 meta
 ```
   Images can be found in the "images" folder and are organized per class.
-  ![categories](https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/categories.png)
+  
+  <p align="center">
+  <img src="https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/categories.png">
+  </p>
+  
   For example, in the folder "apple_pie", we can see images of apple pie:
-  ![sampleimg](https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/sampleimg.png)
+  
+  <p align="center">
+  <img src="https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/sampleimg.png">
+  </p>
+  
   All image IDs are unique and correspond to the foodspotting.com review IDs. Thus the original articles can retrieved trough [foodspotting](http://www.foodspotting.com/reviews) or through the [foodspotting api](http://www.foodspotting.com/api).
   The class labels and test/train splitting used in the experiment can be found in the "meta" directory:
-  ![metafile](https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/metafile.png)
+  
+  <p align="center">
+  <img src="https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/metafile.png">
+  </p>
+  
   The class labels of the images under different categories are like this:
-  ![classlabel](https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/classlabel.png)
+  
+  <p align="center">
+  <img src="https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/classlabel.png">
+  </p>
+  
   The train set IDs are like this:
-  ![trainlabel](https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/trainlabel.png)
+  
+  <p align="center">
+  <img src="https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/trainlabel.png">
+  </p>
+  
   And the test set IDs are the rest of those IDs:
-  ![testlabel](https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/testlabel.png)
+  
+  <p align="center">
+  <img src="https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/testlabel.png">
+  </p>
+  
   There are also two txt files providing some instructions on the use of this dataset:
 ```
 license_agreement.txt
