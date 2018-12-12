@@ -9,5 +9,6 @@
   Rachel Rong  
   Wenying Hu  
   ```
+  For your reference, our powerpoint slides are available [here](https://github.com/MSBA-StellaSun/APM-project/blob/master/Presentation-Food%20Calories.pptx).  
   Thank you!
 
