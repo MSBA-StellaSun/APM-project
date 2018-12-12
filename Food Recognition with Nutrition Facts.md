@@ -205,7 +205,7 @@ plt.tight_layout(rect=[0, 0.03, 1, 0.95])
   <p align="center">
   <img src="https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/EDA.png">
   </p>
-  
+  The [EDA](/example/profile.md)	
 ### Feature engineering/selection
 
   First we import the packages needed:
