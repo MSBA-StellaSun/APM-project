@@ -92,6 +92,8 @@ images
 meta
 ```
 Images can be found in the "images" folder and are organized per class.
+![categories](https://github.com/MSBA-StellaSun/APM-project/data/categories.png)  
+
 There are also two txt files providing some instructions on the use of this dataset:  
 ```
 license_agreement.txt
