@@ -18,7 +18,7 @@
   - Source
   - Methods of acquisition
   - Relevant Characteristics
-- [Data Exploration and Preprocessing](#data-exploration-and-preprocessing)
+- [Data Exploration and Preprocessing](#4-data-exploration-and-preprocessing)
   - Feature engineering/selection
   - Relevant Plots
 - Learning/Modeling
@@ -144,9 +144,165 @@ README.txt
 
 ### Relevant Plots
 
+  We explored and processed our data using Spyder(Python 3.6).
+  First we import relevant packages needed:
+```Python
+import matplotlib.pyplot as plt
+import matplotlib.image as img
+import numpy as np
+import os
+from os import listdir
+from PIL import Image
+```
+  Then for all 101 categories, we randomly show an image, stating the name of that food category, the number of images and the minimal side length of images in that category.
+```Python
+root_dir = 'C:/Users/ayuan/OneDrive/Documents/000APM/images/'
+rows = 17
+cols = 6
+fig, ax = plt.subplots(rows, cols, frameon=False, figsize=(15, 25))
+fig.suptitle('Random Image from Each Food Class with Descriptions', fontsize=15)
+sorted_food_dirs = sorted(os.listdir(root_dir))
+for i in range(rows):
+    for j in range(cols):
+        try:
+            food_dir = sorted_food_dirs[i*cols + j]
+        except:
+            break
+        
+        path=os.path.join(root_dir, food_dir)
+        onlyfiles = [f for f in listdir(path)]
+        onlyfiles = [f for f in onlyfiles if f.endswith('.jpg')]
+        data = {}
+        images_count= len(onlyfiles)
+        min_width = 10**100  
+        max_width = 0
+        min_height = 10**100 
+        max_height = 0
+        for filename in onlyfiles:
+            pic = Image.open(os.path.join(root_dir, food_dir, filename))
+            width, height = pic.size
+            min_width = min(width, min_width)
+            max_width = max(width, max_height)
+            min_height = min(height, min_height)
+            max_height= max(height, max_height)
+
+        all_files = os.listdir(os.path.join(root_dir, food_dir))
+        rand_img = np.random.choice(all_files)
+        img = plt.imread(os.path.join(root_dir, food_dir, rand_img))
+        ax[i][j].imshow(img)
+        ec = (0, .6, .1)
+        fc = (0, .7, .2)
+        string1=food_dir+','+''.join(['img count:',str(images_count)])
+        string2=' '.join(['min width/height:',str(min_width),str(min_height)])
+        string3=' '.join(['max width/height:',str(max_width),str(max_height)])
+        string='\n'.join([string1,string2])
+        ax[i][j].text(10, 10, string, size=8, rotation=0,
+                ha="left", va="top", 
+                bbox=dict(boxstyle="round",facecolor='white', edgecolor='black'))
+plt.setp(ax, xticks=[], yticks=[])
+plt.tight_layout(rect=[0, 0.03, 1, 0.95])
+```
+  <p align="center">
+  <img src="https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/EDA.png">
+  </p>
   
 ### Feature engineering/selection
 
+  First we import the packages needed:
+```Python
+import numpy as np
+import cv2
+import gc
+import random
+```
+  Then the train/test metadata are loaded using this function:
+```Python
+# return the data in the file.
+def read_file(fn):
+    data = []
+    with open(fn, "r") as fd:
+        for line in fd:
+            data.append(line.strip())
+    return data
+```
+  From the exploration we can see that the side length of all the images varies from 193 to 512 pixels. So we need to first pad each image with an edge to a fixed side length of 512 pixels, 
+  <p align="center">
+  <img src="https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/padding.png">
+  </p>
+  and then resize all images to 128*128.
+  <p align="center">
+  <img src="https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/resize.png">
+  </p>
+  
+```Python
+# return the image padded to (512, 512, 3) and downsize to (128, 128, 3).
+W = 128
+def read_image(fn):
+    image = cv2.imread(fn,cv2.IMREAD_COLOR)
+    x, y, _ = image.shape
+    padded_image = np.pad(image, ((0, 512 - x), (0, 512 - y), (0, 0)), 'edge')
+    return cv2.resize(padded_image,(W, W))
+```
+  Then we write a function to map all the labels to distinct index values:
+```Python
+# prepare a map of labels to their result index.
+def prepare_labels(dataset):
+    labels = set()
+    for i in dataset:
+        labels.add(i.split("/")[0])
+    
+    labels_map = {}
+    for p, l in enumerate(sorted(list(labels))):
+        labels_map[l] = p
+    return labels_map
+```
+  And then we store all the image data and all the corresponding labels into numpy arrays, with corresponding category in the list turned into 1 while others remain 0.
+  <p align="center">
+  <img src="https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/array.png">
+  </p>
+  
+```Python
+# prepare the data into numpy array format.
+def prepare_data(dataset, labels_map):
+    images = np.zeros((len(dataset), W, W, 3), dtype=np.uint8)
+    labels = np.zeros((len(dataset), 101))
+    for p, i in enumerate(dataset):
+        if p % 5000 == 0:
+            gc.collect()
+            print("Processed {} images.".format(p))
+        images[p] = read_image("images/" + i + ".jpg")
+        labels[p, labels_map[i.split("/")[0]]] = 1
+    return images, labels
+```
+  Then we write the main function to link all the defined functions above for us to prepare the train/test data into npy files. Besides, we also randomly shuffle the images at first, otherwise the images would be by categories in alphabetical order, which will adversly influence our model fitting.
+```Python
+# preprocess all data into npy format.
+def process_data(dataset_name):
+    print("\nProcess {} set:".format(dataset_name))
+    dataset = read_file("meta/{}.txt".format(dataset_name))
+    random.Random(10086).shuffle(dataset)
+    labels_map = prepare_labels(dataset)
+    x, y = prepare_data(dataset, labels_map)
+    np.save("data/{}_x.npy".format(dataset_name), x)
+    np.save("data/{}_y.npy".format(dataset_name), y)
+def main():
+    process_data("train")
+    process_data("test")
+```
+  After excuting the main function:
+```Python
+if __name__ == "__main__":
+    main()
+```
+  We get our feature matrix npy files for train and test set.
+  <p align="center">
+  <img src="https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/xnpy.png">
+  </p>
+  And also our label npy files for train and test set.
+  <p align="center">
+  <img src="https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/ynpy.png">
+  </p>
+  
 ## 5. Learning/Modeling
 ### Chosen models and why
 ### Training methods (validation, parameter selection)
