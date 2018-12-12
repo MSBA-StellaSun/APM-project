@@ -95,6 +95,7 @@ We aggregated image data from Food 101 dataset and made image pre-processing to 
 
 Ensemble learning algorithm can be used for future work. Ensemble method combines multiple models to obtain better predictive performance. 
 Other architectures of convolutional networks, such as ResNet and VGG, can be applied in the future. ResNet makes use of Residual module and make it easier for network layers to represent the identity mapping. So ResNet have more layers and is able to go deeper but takes much more time. Compared to AlexNet, VGG uses multiple stacked smaller size kernel. These non-linear layers help increase the depth of the network, which enables the VGG to learn more complex features with a lower cost. Thus, VGG performs well on image feature extraction.
+This project can help recognize the food class from an image and therefore can be applied to many practical situations. When a person who is keeping on diet wants to eat something and has no idea about the amount of calorie he or she will take after eating it, he or she can take a picture of the food, input the image into our model and then a nutrition information will pop up after the model recognizes the image. The model can also be helpful for people who have special nutrition needs and want to learn what nutrition they can obtain from the food. Moreover, with the nutrition facts of the food class, recipe recommendation can also be realized for future work.
 
 ## References
 
