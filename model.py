@@ -17,7 +17,7 @@ def shuffle_data(train_x, train_y):
     return np.array([i[0] for i in data]), np.array([i[1] for i in data])
 
 # models.
-def cnn_model(x_shape, y_shape, archi="ResNet"):
+def cnn_model(x_shape, y_shape, archi="AlexNet"):
     image_aug = ImageAugmentation()
     image_aug.add_random_blur(1)
     image_aug.add_random_flip_leftright()
@@ -78,7 +78,7 @@ def cnn_model(x_shape, y_shape, archi="ResNet"):
     return net
 
 # training loop.
-def cnn_train(train_x, train_y, test_x, test_y, num_epoch=200):
+def cnn_train(train_x, train_y, test_x, test_y, num_epoch=100):
     tf.reset_default_graph()
     net = cnn_model(train_x.shape, train_y.shape)
     clf = tflearn.DNN(net)
