@@ -40,19 +40,19 @@ def prepare_data(dataset, labels_map):
         if p % 5000 == 0:
             gc.collect()
             print("Processed {} images.".format(p))
-        images[p] = read_image("images/" + i + ".jpg")
+        images[p] = read_image("./../images/" + i + ".jpg")
         labels[p, labels_map[i.split("/")[0]]] = 1
     return images, labels
 
 # preprocess all data into npy format.
 def process_data(dataset_name):
     print("\nProcess {} set:".format(dataset_name))
-    dataset = read_file("meta/{}.txt".format(dataset_name))
+    dataset = read_file("./../meta/{}.txt".format(dataset_name))
     random.Random(10086).shuffle(dataset)
     labels_map = prepare_labels(dataset)
     x, y = prepare_data(dataset, labels_map)
-    np.save("data/{}_x.npy".format(dataset_name), x)
-    np.save("data/{}_y.npy".format(dataset_name), y)
+    np.save("./../data/{}_x.npy".format(dataset_name), x)
+    np.save("./../data/{}_y.npy".format(dataset_name), y)
 
 def main():
     process_data("train")
