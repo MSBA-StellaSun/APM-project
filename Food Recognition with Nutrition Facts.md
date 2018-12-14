@@ -322,9 +322,8 @@ if __name__ == "__main__":
 ### Other design choices
 
 ## 6. Results
-### Key findings and evaluation
-### Comparisons from different approaches
-### Plots and figures
+### Model Performance
+After running 60 epochs, our model begins to converge. We run 100 epochs to make the result more accurate and evaluate once every 5 epochs. The final accuracy of AlexNet model is 52.63%. This model outperforms the random forest model from original paper, which achieving highest accuracy of 50.76%.
 
 ## 7. Application
 ### FatSecret Platform API
