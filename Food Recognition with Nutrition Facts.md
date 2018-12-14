@@ -25,10 +25,7 @@
   - Chosen models and why
   - Training methods (validation, parameter selection)
   - Other design choices
-- Results
-  - Key findings and evaluation
-  - Comparisons from different approaches
-  - Plots and figures
+- Model Performance
 - Conclusion
   - Summarize everything above
   - Lessons learned
@@ -321,9 +318,31 @@ if __name__ == "__main__":
 
 ### Other design choices
 
-## 6. Results
-### Model Performance
-After running 60 epochs, our model begins to converge. We run 100 epochs to make the result more accurate and evaluate once every 5 epochs. The final accuracy of AlexNet model is 52.63%. This model outperforms the random forest model from original paper, which achieving highest accuracy of 50.76%.
+## 6. Model Performance
+After running 60 epochs, our model begins to converge. We run 100 epochs to make the result more accurate and evaluate once every 5 epochs. The final accuracy of AlexNet model is 52.63%. 
+```
+Accuracy: 0.2127920792079208
+Accuracy: 0.28538613861386136
+Accuracy: 0.361029702970297
+Accuracy: 0.3875643564356436
+Accuracy: 0.3911683168316832
+Accuracy: 0.44902970297029704
+Accuracy: 0.4558811881188119
+Accuracy: 0.4759207920792079
+Accuracy: 0.47528712871287127
+Accuracy: 0.4982970297029703
+Accuracy: 0.47845544554455444
+Accuracy: 0.4986138613861386
+Accuracy: 0.4988118811881188
+Accuracy: 0.5103366336633663
+Accuracy: 0.504039603960396
+Accuracy: 0.5017425742574257
+Accuracy: 0.5153267326732673
+Accuracy: 0.5221386138613862
+Accuracy: 0.510019801980198
+Accuracy: 0.5262574257425743
+```
+This model outperforms the random forest model from original paper, which achieving highest accuracy of 50.76%.
 
 ## 7. Application
 ### FatSecret Platform API
