@@ -344,8 +344,11 @@ We applied a free but limited access to the databse. API Access Key: 8575eae8dc1
 For simplicity and demo purpose, we wrote two python programs.  
   
 Python Code could be found from following links:  
-demo.py: https://github.com/MSBA-StellaSun/APM-project/blob/master/model.py.  
+demo.py: https://github.com/MSBA-StellaSun/APM-project/blob/master/demo.py.  
 PyWriteHtml.py: https://github.com/MSBA-StellaSun/APM-project/blob/master/PyWriteHtml.py. 
+
+From command line: (image.jpg could be replaced with any given path of a image file)  
+python demo.py image.jpg
 
 These two programs would do following work:
 -	Read in trained and saved model 
@@ -414,7 +417,8 @@ We aggregated image data from Food 101 dataset and made image pre-processing to 
 ### Future work - continuations or improvements
 
 Ensemble learning algorithm can be used for future work. Ensemble method combines multiple models to obtain better predictive performance. 
-Other architectures of convolutional networks, such as ResNet and VGG, can be applied in the future. ResNet makes use of Residual module and make it easier for network layers to represent the identity mapping. So ResNet have more layers and is able to go deeper but takes much more time. Compared to AlexNet, VGG uses multiple stacked smaller size kernel. These non-linear layers help increase the depth of the network, which enables the VGG to learn more complex features with a lower cost. Thus, VGG performs well on image feature extraction.
+Other architectures of convolutional networks, such as ResNet and VGG, can be applied in the future. ResNet makes use of Residual module and make it easier for network layers to represent the identity mapping. So ResNet have more layers and is able to go deeper but takes much more time. Compared to AlexNet, VGG uses multiple stacked smaller size kernel. These non-linear layers help increase the depth of the network, which enables the VGG to learn more complex features with a lower cost. Thus, VGG performs well on image feature extraction.  
+In addition, colloprating FatSecret API 
 
 ## 9. References
 
