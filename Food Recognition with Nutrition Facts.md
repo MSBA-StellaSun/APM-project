@@ -34,7 +34,7 @@
   - Lessons learned
   - Future work - continuations or improvements
 - [References](#9-References)
-- Relevant project links (i.e. Github, Bitbucket, etc…)
+  - Relevant project links (i.e. Github, Bitbucket, etc…)
 
 ## 1. Abstract
 Food provides our bodies with the energy, protein, essential fats, vitamins and minerals to live, grow and function properly. People use different methods to determine how many nutrition they need and control the amount by daily intake. An accurate and convenient solution to food nutrition measurement is the key to long-term health plan. In this project, we propose an assistive food nutrition measurement model which could recognize food and provide nutrition information automatically. In order to identify the food accurately, we use deep convolutional neural networks to classify 101,000 high-quality food images for model training. The proposed methodology and measurements of the proposed model are also described below.
