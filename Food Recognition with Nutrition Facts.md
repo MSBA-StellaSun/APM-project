@@ -337,14 +337,14 @@ Once we are able to predict the food class, we access a food and nutrition datab
 
 FatSecret Platform API is “the #1 food and nutrition database in the world, utilized by more than 10,000 developers, in more than 50 countries contributing in excess of 500 million API calls every month”  provided by https://platform.fatsecret.com/api/. 
 
-An "out of the box" FatSecret Platform API application incorporates the following features:
-•	a summary of food, exercise and weight activity
-•	integrated food and nutrition search and detailed results
-•	a food diary - for planning and tracking foods eaten
-•	an activity diary - to estimate and record energy utilization for various exercises
-•	a weight chart and journal - to set goals and track progress
+* An "out of the box" FatSecret Platform API application incorporates the following features:
+-	a summary of food, exercise and weight activity
+-	integrated food and nutrition search and detailed results
+-	a food diary - for planning and tracking foods eaten
+-	an activity diary - to estimate and record energy utilization for various exercises
+-	a weight chart and journal - to set goals and track progress
 
-For simplicity, our project uses the following code to show users the summary of food.
+For simplicity, our project uses the following code to show users only the summary of food. Actually more above features could also be realized, which would be discussed in session 8 future work.
 
 ```JavasScript
 <!DOCTYPE html >
