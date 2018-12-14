@@ -341,10 +341,10 @@ An "out of the box" FatSecret Platform API application incorporates the followin
 
 We applied a free but limited access to the databse. API Access Key: 8575eae8dc11485090730817b5c67c94
 
-For simplicity and demo purpose, we wrote python programs:
-Python Code could be found from following links:
-demo.py: https://github.com/MSBA-StellaSun/APM-project/blob/master/model.py
-PyWriteHtml.py: https://github.com/MSBA-StellaSun/APM-project/blob/master/PyWriteHtml.py
+For simplicity and demo purpose, we wrote python programs.  
+Python Code could be found from following links:  
+demo.py: https://github.com/MSBA-StellaSun/APM-project/blob/master/model.py. 
+PyWriteHtml.py: https://github.com/MSBA-StellaSun/APM-project/blob/master/PyWriteHtml.py. 
 
 These two programs would do following work:
 -	Read trained and saved model 
