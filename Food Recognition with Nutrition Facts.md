@@ -3,9 +3,9 @@
 # Food Recognition with Nutrition Facts
 ## Team members
     Mengying Yu  
-    Shuyuan Sun (ss86757)  
+    Shuyuan Sun 
     Wanxue Dong  
-    Wenying Hu  (wh7893)
+    Wenying Hu
     Xueru Rong  
 ## Content
 - [Abstract](#1-abstract)
