@@ -48,9 +48,9 @@ Sometimes delicious food can be satisfactory, while it could become a barrier to
 
 There are several papers that use the same dataset as ours—food 101. The following papers and blogs were able to achieve certain accuracy based on CNN or Random Forest. 
   
-Inception-ResNet (full layer training) 72.55% Accuracy: [link](https://pdfs.semanticscholar.org/6dbb/4f5a00f81971b7bc45f670f3706071a9db20.pdf)
+[Inception-ResNet (full layer training) 72.55% Accuracy](https://pdfs.semanticscholar.org/6dbb/4f5a00f81971b7bc45f670f3706071a9db20.pdf)
   
-Random Forest 50.76% Accuracy: [link](https://link.springer.com/chapter/10.1007/978-3-319-10599-4_29)
+[Random Forest 50.76% Accuracy](https://link.springer.com/chapter/10.1007/978-3-319-10599-4_29)
 
 ### Outline of approach and rationale (high level)
     - Data preprocessing 
