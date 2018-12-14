@@ -25,7 +25,10 @@
   - Chosen models and why
   - Training methods (validation, parameter selection)
   - Other design choices
-- Model Performance
+- Results
+  - Key findings and evaluation
+  - Comparisons from different approaches
+  - Plots and figures
 - Conclusion
   - Summarize everything above
   - Lessons learned
@@ -318,31 +321,9 @@ if __name__ == "__main__":
 
 ### Other design choices
 
-## 6. Model Performance
-After running 60 epochs, our model begins to converge. We run 100 epochs to make the result more accurate and evaluate once every 5 epochs. The final accuracy of AlexNet model is 52.63%. 
-```
-Accuracy: 0.2127920792079208
-Accuracy: 0.28538613861386136
-Accuracy: 0.361029702970297
-Accuracy: 0.3875643564356436
-Accuracy: 0.3911683168316832
-Accuracy: 0.44902970297029704
-Accuracy: 0.4558811881188119
-Accuracy: 0.4759207920792079
-Accuracy: 0.47528712871287127
-Accuracy: 0.4982970297029703
-Accuracy: 0.47845544554455444
-Accuracy: 0.4986138613861386
-Accuracy: 0.4988118811881188
-Accuracy: 0.5103366336633663
-Accuracy: 0.504039603960396
-Accuracy: 0.5017425742574257
-Accuracy: 0.5153267326732673
-Accuracy: 0.5221386138613862
-Accuracy: 0.510019801980198
-Accuracy: 0.5262574257425743
-```
-This model outperforms the random forest model from original paper, which achieving highest accuracy of 50.76%.
+## 6. Results
+### Model Performance
+After running 60 epochs, our model begins to converge. We run 100 epochs to make the result more accurate and evaluate once every 5 epochs. The final accuracy of AlexNet model is 52.63%. This model outperforms the random forest model from original paper, which achieving highest accuracy of 50.76%.
 
 ## 7. Application
 ### FatSecret Platform API
@@ -351,14 +332,28 @@ Once we are able to predict the food class, we access a food and nutrition datab
 
 FatSecret Platform API is “the #1 food and nutrition database in the world, utilized by more than 10,000 developers, in more than 50 countries contributing in excess of 500 million API calls every month”  provided by https://platform.fatsecret.com/api/. 
 
-* An "out of the box" FatSecret Platform API application incorporates the following features:
+An "out of the box" FatSecret Platform API application incorporates the following features:
 -	a summary of food, exercise and weight activity
 -	integrated food and nutrition search and detailed results
 -	a food diary - for planning and tracking foods eaten
 -	an activity diary - to estimate and record energy utilization for various exercises
 -	a weight chart and journal - to set goals and track progress
 
-For simplicity, our project uses the following code to show users only the summary of food. Actually more above features could be realized by app developers, which would be discussed in session 8 "future work".
+We applied a free but limited access to the databse. API Access Key: 8575eae8dc11485090730817b5c67c94
+
+For simplicity and demo purpose, we wrote python programs which would do following work:
+-	Read trained and saved model 
+- 	Read in labels
+-	Read in the provided image and make classification
+- 	Print out top 5 class names
+-	Use API Access key to connect the database, call foods_search function in fatsecret library given the class name who has highest probability
+-	Genarate the following html code and prompt out a window to user which includes food's nuitrition information.
+
+Python Code could be found from following links:
+demo.py: 
+PyWriteHtml.py: 
+
+Actually more above features could be realized by app developers, which would be discussed in session 8 "future work".
 
 ```html
 <!DOCTYPE html >
@@ -424,5 +419,37 @@ Other architectures of convolutional networks, such as ResNet and VGG, can be ap
 [2] Bossard, L., Guillaumin, M., & Van Gool, L. (2014, September). Food-101–mining discriminative components with random forests. In European Conference on Computer Vision (pp. 446-461). Springer, Cham. Retrieved from https://www.vision.ee.ethz.ch/datasets_extra/food-101/ 
 
 [3] Simayijiang, Z., & Grimm, S. Segmentation with Graph Cuts. Matematikcentrum Lunds Universitet.[Online]. Available: http://www.maths.lth.se/matematiklth/personal/petter/rapporter/graph. pdf.[Diakses 8 Mei 2017].  
+(should have more references here)
 
-[4] Krizhevsky, A., Sutskever, I., & Hinton, G. E. (2012). Imagenet classification with deep convolutional neural networks. In Advances in neural information processing systems (pp. 1097-1105).
+
+  
+(Below are from his blog requirement)  
+Relevant project links (i.e. Github, Bitbucket, etc…)
+
+    General Tips:
+    In general, imagine your audience has a basic understanding of machine learning concepts, but is likely far from an expert. It should be an easier read than most academic research papers.
+    Key code snippets can be helpful for people trying to understand how you implemented your project.
+    Be sure to include images, gifs, or short videos. These will help liven up your post, make it more attractive to readers, and give you an opportunity to flex your data visualization skills. 
+    Plenty of good examples can be found on Medium on TowardsDataScience.
+    Make sure your writing is fluid and grammatically correct. 
+
+    Evaluation Criteria include: 
+    Clear description of project goals (and business relevance if applicable)
+    Approach to pre-processing of data and feature extraction, the choice of data mining models used (and rationale for these choices)
+    New theory/math (if applicable, most projects won’t have this component)
+    Intelligent selection and tuning of models, addressing overfitting vs underfitting
+    Novelty of approach/method/algorithm (if applicable)
+    Presentation and evaluation of results
+    Replicability of the results (is the description such that someone well versed in the art can obtain similar results on the same data?)
+    Insights obtained from the effort
+    Potential business impact or how the results can be “actioned upon” (if applicable)
+    Appropriate/relevant reference list
+    Quality of the writing (grammar and style)
+    Visuals to aid in understanding of project elements 
+
+Examples:  
+https://towardsdatascience.com/automatic-speaker-recognition-using-transfer-learning-6fab63e34e74
+https://towardsdatascience.com/predict-the-number-of-likes-on-instagram-a7ec5c020203
+https://towardsdatascience.com/youtube-views-predictor-9ec573090acb
+https://towardsdatascience.com/a-data-science-for-good-machine-learning-project-walk-through-in-python-part-one-1977dd701dbc
+https://towardsdatascience.com/predicting-school-performance-with-census-income-data-ad3d8792ac97
