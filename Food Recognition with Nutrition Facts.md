@@ -385,8 +385,9 @@ For simplicity, our project uses the following code to show users only the summa
 	</body>
 </html>
 ```
-![alt](/Users/wd4446/Box Sync/Adv_Predictive_Modeling/Image_Recognition/1.png)
-
+  <p align="center">
+  <img src="https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/nutritionFactSample.png">
+  </p>
 
 ## 8. Conclusion
 ### Summarize everything above
