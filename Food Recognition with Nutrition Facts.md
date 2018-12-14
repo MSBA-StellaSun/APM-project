@@ -330,7 +330,64 @@ if __name__ == "__main__":
 ### Comparisons from different approaches
 ### Plots and figures
 
-## 7. Conclusion
+## 7. Application
+### FatSecret Platform API
+
+Once we are able to predict the food class, we access a food and nutrition database,  FatSecret Platform API, which will return the food’s nutrition fact information.  
+
+FatSecret Platform API is “the #1 food and nutrition database in the world, utilized by more than 10,000 developers, in more than 50 countries contributing in excess of 500 million API calls every month”  provided by https://platform.fatsecret.com/api/. 
+
+An "out of the box" FatSecret Platform API application incorporates the following features:
+•	a summary of food, exercise and weight activity
+•	integrated food and nutrition search and detailed results
+•	a food diary - for planning and tracking foods eaten
+•	an activity diary - to estimate and record energy utilization for various exercises
+•	a weight chart and journal - to set goals and track progress
+
+For simplicity, our project uses the following code to show users the summary of food.
+
+```JavasScript
+<!DOCTYPE html >
+<html>
+	<head>
+		<title>Sample Code</title>
+		<style>
+			body
+			{
+				font-family: Arial;
+				font-size: 12px;
+			}
+			.title{
+				font-size: 200%;
+				font-weight:bold;
+				margin-bottom:20px;
+			}
+			.holder{
+				width:300px;
+				margin:0 auto;
+				padding: 10px;
+			}
+		</style>
+		<script src="http://platform.fatsecret.com/js?key=8575eae8dc11485090730817b5c67c94&amp;auto_template=false&amp;theme=none"></script>
+		<script>
+			function doLoad(){
+				fatsecret.setContainer('container');
+				fatsecret.setCanvas("food.get", {food_id: 1679});
+			}
+		</script>
+	</head>
+	<body onload="doLoad()">
+		<div class="holder">
+			<div class="title"><script>fatsecret.writeHolder("foodtitle");</script></div>
+			<script>fatsecret.writeHolder("nutritionpanel");</script>
+			<div id="container"></div>
+		</div>
+	</body>
+</html>
+```
+
+
+## 8. Conclusion
 ### Summarize everything above
 
 We aggregated image data from Food 101 dataset and made image pre-processing to convert the images into proper size. After splitting train and test sets, we conducted AlexNet models to perform image recognition. The accuracy of the AlexNet model is 52.6%, which is better than the result of original paper, 50.67%. After predicting the food class from image recognition, we got the nutrition and calorie facts of the food from FatScret Platform API and showed the information to people.
@@ -344,7 +401,7 @@ We aggregated image data from Food 101 dataset and made image pre-processing to 
 Ensemble learning algorithm can be used for future work. Ensemble method combines multiple models to obtain better predictive performance. 
 Other architectures of convolutional networks, such as ResNet and VGG, can be applied in the future. ResNet makes use of Residual module and make it easier for network layers to represent the identity mapping. So ResNet have more layers and is able to go deeper but takes much more time. Compared to AlexNet, VGG uses multiple stacked smaller size kernel. These non-linear layers help increase the depth of the network, which enables the VGG to learn more complex features with a lower cost. Thus, VGG performs well on image feature extraction.
 
-## 8. References
+## 9. References
 
 [1] Pouladzadeh, P., Kuhad, P., Peddi, S. V. B., Yassine, A., & Shirmohammadi, S. (2016, May). Food calorie measurement using deep learning neural network. In IEEE International Instrumentation and Measurement Technology Conference Proceedings (I2MTC) (pp. 1-6).
 
