@@ -341,20 +341,19 @@ An "out of the box" FatSecret Platform API application incorporates the followin
 
 We applied a free but limited access to the databse. API Access Key: 8575eae8dc11485090730817b5c67c94
 
-For simplicity and demo purpose, we wrote python programs.  
+For simplicity and demo purpose, we wrote two python programs.  
+  
 Python Code could be found from following links:  
-demo.py: https://github.com/MSBA-StellaSun/APM-project/blob/master/model.py. 
+demo.py: https://github.com/MSBA-StellaSun/APM-project/blob/master/model.py.  
 PyWriteHtml.py: https://github.com/MSBA-StellaSun/APM-project/blob/master/PyWriteHtml.py. 
 
 These two programs would do following work:
--	Read trained and saved model 
+-	Read in trained and saved model 
 - 	Read in labels
--	Read in the provided image and make classification
+-	Read in a provided image and make the classification
 - 	Print out top 5 class names
--	Use API Access key to connect the database, call foods_search function in fatsecret library given the class name who has highest probability
+-	Use API Access key to connect to the database, call foods_search function from fatsecret library, pass the predicted class name who has highest probability as the parameter
 -	Genarate the following html code and prompt out a window to user which includes food's nuitrition information.
-
-Actually more above features could be realized by app developers, which would be discussed in session 8 "future work".
 
 ```html
 <!DOCTYPE html >
@@ -400,6 +399,8 @@ Users are able to see following picture:
   <p align="center">
   <img src="https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/nutritionSample.png">
   </p>
+
+More features could be realized by app developers, which would be discussed in session 8 "future work".
 
 ## 8. Conclusion
 ### Summarize everything above
