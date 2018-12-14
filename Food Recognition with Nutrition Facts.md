@@ -26,9 +26,9 @@
   - Training methods (validation, parameter selection)
   - Other design choices
 - Results
-  - Key findings and evaluation
-  - Comparisons from different approaches
-  - Plots and figures
+  - Model Performance
+- Application
+  - FatSecret Platform API
 - Conclusion
   - Summarize everything above
   - Lessons learned
