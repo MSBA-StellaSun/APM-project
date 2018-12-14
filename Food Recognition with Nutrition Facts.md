@@ -344,9 +344,9 @@ FatSecret Platform API is “the #1 food and nutrition database in the world, ut
 -	an activity diary - to estimate and record energy utilization for various exercises
 -	a weight chart and journal - to set goals and track progress
 
-For simplicity, our project uses the following code to show users only the summary of food. Actually more above features could also be realized, which would be discussed in session 8 future work.
+For simplicity, our project uses the following code to show users only the summary of food. Actually more above features could be realized by app developers, which would be discussed in session 8 "future work".
 
-```JavasScript
+```html
 <!DOCTYPE html >
 <html>
 	<head>
@@ -385,6 +385,7 @@ For simplicity, our project uses the following code to show users only the summa
 	</body>
 </html>
 ```
+![alt](/Users/wd4446/Box Sync/Adv_Predictive_Modeling/Image_Recognition/1.png)
 
 
 ## 8. Conclusion
