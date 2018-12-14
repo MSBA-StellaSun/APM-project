@@ -71,7 +71,7 @@ One of the novelties of our project is that recognized food picture is associate
 
 ### Source
 
-  We obtained our data from the original paper using random forest (2014) [linkhere](https://www.vision.ee.ethz.ch/datasets_extra/food-101/). 
+  We obtained our data from the original paper using random forest (2014) [here](https://www.vision.ee.ethz.ch/datasets_extra/food-101/). 
   
 ```
 @inproceedings{bossard14,
