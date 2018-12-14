@@ -21,19 +21,19 @@
 - [Data Exploration and Preprocessing](#4-data-exploration-and-preprocessing)
   - Feature engineering/selection
   - Relevant Plots
-- Learning/Modeling
+- [Learning/Modeling](#5-Learning/Modeling)
   - Chosen models and why
   - Training methods (validation, parameter selection)
   - Other design choices
-- Results
+- [Results](#6-Results)
   - Model Performance
-- Application
+- [Application](#7-Application)
   - FatSecret Platform API
-- Conclusion
+- [Conclusion](#8-Conclusion)
   - Summarize everything above
   - Lessons learned
   - Future work - continuations or improvements
-- References
+- [References](#9-References)
 - Relevant project links (i.e. Github, Bitbucket, etc…)
 
 ## 1. Abstract
