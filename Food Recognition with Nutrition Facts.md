@@ -328,7 +328,7 @@ After running 60 epochs, our model begins to converge. We run 100 epochs to make
 ## 7. Application
 ### FatSecret Platform API
 
-Once we are able to predict the food class, we access a food and nutrition database,  FatSecret Platform API, which will return the food’s nutrition fact information.  
+Once we are able to predict the food class, we access a food and nutrition database,  FatSecret Platform API, which will return food’s nutrition fact information.  
 
 FatSecret Platform API is “the #1 food and nutrition database in the world, utilized by more than 10,000 developers, in more than 50 countries contributing in excess of 500 million API calls every month”  provided by https://platform.fatsecret.com/api/. 
 
@@ -345,10 +345,11 @@ For simplicity and demo purpose, we wrote two python programs.
   
 Python Code could be found from following links:  
 demo.py: https://github.com/MSBA-StellaSun/APM-project/blob/master/demo.py.  
-PyWriteHtml.py: https://github.com/MSBA-StellaSun/APM-project/blob/master/PyWriteHtml.py. 
+PyWriteHtml.py: https://github.com/MSBA-StellaSun/APM-project/blob/master/PyWriteHtml.py.  
 
 From command line: (image.jpg could be replaced with any given path of a image file)  
-python demo.py image.jpg
+python demo.py image.jpg 
+(demo.py will call functions build in PyWriteHtml.py)
 
 These two programs would do following work:
 -	Read in trained and saved model 
@@ -356,7 +357,7 @@ These two programs would do following work:
 -	Read in a provided image and make the classification
 - 	Print out top 5 class names
 -	Use API Access key to connect to the database, call foods_search function from fatsecret library, pass the predicted class name who has highest probability as the parameter
--	Genarate the following html code and prompt out a window to user which includes food's nuitrition information.
+-	Genarate the following html code, e.g., Chicken Drumstck is the predicted food and food id is 1679 in the database, and prompt out a window to user which includes food's nuitrition information.
 
 ```html
 <!DOCTYPE html >
@@ -403,7 +404,7 @@ Users are able to see following picture:
   <img src="https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/nutritionSample.png">
   </p>
 
-More features could be realized by app developers, which would be discussed in session 8 "future work".
+More features could be realized by app developers discussed in session 8 "future work".
 
 ## 8. Conclusion
 ### Summarize everything above
@@ -417,8 +418,8 @@ We aggregated image data from Food 101 dataset and made image pre-processing to 
 ### Future work - continuations or improvements
 
 Ensemble learning algorithm can be used for future work. Ensemble method combines multiple models to obtain better predictive performance. 
-Other architectures of convolutional networks, such as ResNet and VGG, can be applied in the future. ResNet makes use of Residual module and make it easier for network layers to represent the identity mapping. So ResNet have more layers and is able to go deeper but takes much more time. Compared to AlexNet, VGG uses multiple stacked smaller size kernel. These non-linear layers help increase the depth of the network, which enables the VGG to learn more complex features with a lower cost. Thus, VGG performs well on image feature extraction.  
-In addition, FatSecret API could not only provide nutrition information, but also could allow users to create their own profiles and keep their food diary. Ideally, users do not need to type in all the foods they consumed for each meal, they could simply take a picture and upload to an app which should utilize our model and collaborate with FatSecret API to provide users the total nutrition they take, including calories, fat, cholesterol, and etc. 
+Other architectures of convolutional networks, such as ResNet and VGG, can be applied in the future. ResNet makes use of Residual module and make it easier for network layers to represent the identity mapping. So ResNet have more layers and is able to go deeper but takes much more time. Compared to AlexNet, VGG uses multiple stacked smaller size kernel. These non-linear layers help increase the depth of the network, which enables the VGG to learn more complex features with a lower cost. Thus, VGG performs well on image feature extraction.    
+In addition, FatSecret API could not only provide nutrition information, but also could allow users to create their own profiles and keep their food diary. Ideally, users do not need to type in all the foods they consumed for each meal, they could simply take a picture and upload to an app which utilizes our model and collaborates with FatSecret API to provide users the total nutrition they take, including calories, fat, cholesterol, and etc. 
 
 ## 9. References
 
