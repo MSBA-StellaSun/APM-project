@@ -386,7 +386,7 @@ For simplicity, our project uses the following code to show users only the summa
 </html>
 ```
   <p align="center">
-  <img src="https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/nutritionFactSample.png">
+  <img src="https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/nutritionSample.png">
   </p>
 
 ## 8. Conclusion
