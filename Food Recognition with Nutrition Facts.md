@@ -348,7 +348,8 @@ demo.py: https://github.com/MSBA-StellaSun/APM-project/blob/master/demo.py.
 PyWriteHtml.py: https://github.com/MSBA-StellaSun/APM-project/blob/master/PyWriteHtml.py.  
 
 From command line: (image.jpg could be replaced with any given path of a image file)  
-python demo.py image.jpg 
+python demo.py image.jpg
+
 (demo.py will call functions build in PyWriteHtml.py)
 
 These two programs would do following work:
@@ -398,7 +399,7 @@ These two programs would do following work:
 	</body>
 </html>
 ```
-Users are able to see following picture:
+Users are able to see the following picture:
 
   <p align="center">
   <img src="https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/nutritionSample.png">
@@ -418,7 +419,9 @@ We aggregated image data from Food 101 dataset and made image pre-processing to 
 ### Future work - continuations or improvements
 
 Ensemble learning algorithm can be used for future work. Ensemble method combines multiple models to obtain better predictive performance. 
-Other architectures of convolutional networks, such as ResNet and VGG, can be applied in the future. ResNet makes use of Residual module and make it easier for network layers to represent the identity mapping. So ResNet have more layers and is able to go deeper but takes much more time. Compared to AlexNet, VGG uses multiple stacked smaller size kernel. These non-linear layers help increase the depth of the network, which enables the VGG to learn more complex features with a lower cost. Thus, VGG performs well on image feature extraction.    
+
+Other architectures of convolutional networks, such as ResNet and VGG, can be applied in the future. ResNet makes use of Residual module and make it easier for network layers to represent the identity mapping. So ResNet have more layers and is able to go deeper but takes much more time. Compared to AlexNet, VGG uses multiple stacked smaller size kernel. These non-linear layers help increase the depth of the network, which enables the VGG to learn more complex features with a lower cost. Thus, VGG performs well on image feature extraction.   
+
 In addition, FatSecret API could not only provide nutrition information, but also could allow users to create their own profiles and keep their food diary. Ideally, users do not need to type in all the foods they consumed for each meal, they could simply take a picture and upload to an app which utilizes our model and collaborates with FatSecret API to provide users the total nutrition they take, including calories, fat, cholesterol, and etc. 
 
 ## 9. References
