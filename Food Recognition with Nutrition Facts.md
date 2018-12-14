@@ -358,7 +358,7 @@ These two programs would do following work:
 -	Read in a provided image and make the classification
 - 	Print out top 5 class names
 -	Use API Access key to connect to the database, call foods_search function from fatsecret library, pass the predicted class name who has highest probability as the parameter
--	Genarate the following html code, e.g., Chicken Drumstck is the predicted food and food id is 1679 in the database, and prompt out a window to user which includes food's nuitrition information.
+-	Genarate the following html code, e.g., chicken drumstck is the predicted food and food id is "1679" in the database, and prompt out a window to user which includes food's nuitrition information.
 
 ```html
 <!DOCTYPE html >
@@ -405,7 +405,7 @@ Users are able to see the following picture:
   <img src="https://github.com/MSBA-StellaSun/APM-project/blob/master/Data/nutritionSample.png">
   </p>
 
-More features could be realized by app developers discussed in session 8 "future work".
+More features could be realized by app developers, discussed in session 8 "future work".
 
 ## 8. Conclusion
 ### Summarize everything above
