@@ -48,13 +48,9 @@ Sometimes delicious food can be satisfactory, while it could become a barrier to
 
 There are several papers that use the same dataset as ours—food 101. The following papers and blogs were able to achieve certain accuracy based on CNN or Random Forest. 
   
-Inception-ResNet (full layer training) 72.55% Accuracy:
+Inception-ResNet (full layer training) 72.55% Accuracy: [link](https://pdfs.semanticscholar.org/6dbb/4f5a00f81971b7bc45f670f3706071a9db20.pdf)
   
-https://pdfs.semanticscholar.org/6dbb/4f5a00f81971b7bc45f670f3706071a9db20.pdf
-  
-Random Forest 50.76% Accuracy:
-  
-https://link.springer.com/chapter/10.1007/978-3-319-10599-4_29
+Random Forest 50.76% Accuracy: [link](https://link.springer.com/chapter/10.1007/978-3-319-10599-4_29)
 
 ### Outline of approach and rationale (high level)
     - Data preprocessing 
@@ -71,7 +67,7 @@ One of the novelties of our project is that recognized food picture is associate
 
 ### Source
 
-  We obtained our data from the original paper using random forest (2014) [here](https://www.vision.ee.ethz.ch/datasets_extra/food-101/). 
+  We obtained our data from the [original paper](https://www.vision.ee.ethz.ch/datasets_extra/food-101/) using random forest (2014). 
   
 ```
 @inproceedings{bossard14,
@@ -85,7 +81,7 @@ One of the novelties of our project is that recognized food picture is associate
 
 ### Methods of acquisition
 
-  Since the dataset is publicly available from the website [downloadhere](http://data.vision.ee.ethz.ch/cvl/food-101.tar.gz), we simply downloaded the dataset and then unzipped it into our laptops.
+  Since the dataset is publicly available from the [website](http://data.vision.ee.ethz.ch/cvl/food-101.tar.gz), we simply downloaded the dataset and then unzipped it into our laptops.
   The unzipped dataset contains two folders:  
 ```
 images
