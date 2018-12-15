@@ -21,7 +21,7 @@
 - [Data Exploration and Preprocessing](#4-data-exploration-and-preprocessing)
   - Feature engineering/selection
   - Relevant Plots
-- [Learningand Modeling](#5-learning-and-modeling)
+- [Learning and Modeling](#5-learning-and-modeling)
   - Chosen models and why
   - Training methods
   - Other design choices
