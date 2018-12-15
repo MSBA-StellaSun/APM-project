@@ -52,11 +52,11 @@ There are several papers that use the same dataset as ours—food 101. The follo
   
 [Random Forest 50.76% Accuracy](https://link.springer.com/chapter/10.1007/978-3-319-10599-4_29)
 
-### Outline of approach and rationale (high level)
+### Outline of approach and rationale
     - Data preprocessing 
     - Train AlexNet
     - Model modifications
-    - Obtain FatSecret API
+    - Obtain FatSecret Platform API
     - Model Evaluations
   
 ### Contributions or novel characteristics of project
