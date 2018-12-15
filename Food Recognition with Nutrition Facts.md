@@ -319,7 +319,10 @@ if __name__ == "__main__":
   The code for modeling can be found [here](https://github.com/MSBA-StellaSun/APM-project/blob/master/model.py). 
 
 ### Other design choices
-
+As mentioned above, we used NVIDIA 1070TI GPU to run the model. In order to go "deeper", however, we need to obtain a faster environment. Google Cloud Platform, in this case, is a useful tool to proceed further studies and designs of our model. Some tips for using GCP: 
+ * Google SDK is a useful shell to upload your dataset from your local computer to the instances used to run the model.
+ * Some errors shows, for example, "You've reached your limit of 0 GPUs NVIDIA K80". You need to edit your quotas to increase the GPU limit and wait for it to be approved.
+ * Don't forget to stop your instances!
 ## 6. Results
 ### Model Performance
 After running 60 epochs, our model begins to converge. We run 100 epochs to make the result more accurate and evaluate once every 5 epochs. The final accuracy of AlexNet model is 52.63%. This model outperforms the random forest model from original paper, which achieving highest accuracy of 50.76%.
@@ -442,7 +445,6 @@ https://github.com/jubins/DeepLearning-Food-Image-Recognition-And-Calorie-Estima
 
 https://github.com/NELSONZHAO/zhihu/blob/master/cifar_cnn/CIFAR-CNN.ipynb 
 
-https://segmentfault.com/a/1190000014583106 
 
 
 
