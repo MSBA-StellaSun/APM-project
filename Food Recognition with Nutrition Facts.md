@@ -64,7 +64,6 @@ There are several papers that use the same dataset as ours—food 101. The follo
 One of the novelties of our project is that recognized food picture is associated with a food ID from the FatSecret database. We then wrote a python code linking this food ID to the database in the FatSecret in order to get the nutrition fact from the recognized picture.  
 
 ## 3. Data Collection and Description
-
 ### Source
 
   We obtained our data from the [original paper](https://www.vision.ee.ethz.ch/datasets_extra/food-101/) using random forest (2014). 
@@ -137,7 +136,6 @@ README.txt
   This dataset is also said to have some amount of noises on purpose to reflect real-world situations. For example, there is an image of iPad under the food category "apple_pie". So the noises may add some difficulties for us to train the model.
   
 ## 4. Data Exploration and Preprocessing
-
 ### Relevant Plots
 
   We explored and processed our data using Spyder(Python 3.6).
@@ -323,6 +321,7 @@ if __name__ == "__main__":
 
 ## 6. Results
 ### Model Performance
+
 After running 60 epochs, our model begins to converge. We run 100 epochs to make the result more accurate and evaluate once every 5 epochs. The final accuracy of AlexNet model is 52.63%. This model outperforms the random forest model from original paper, which achieving highest accuracy of 50.76%.
 
 ## 7. Application
@@ -411,10 +410,6 @@ More features could be realized by app developers, discussed in session 8 "futur
 ### Summarize everything above
 
 We aggregated image data from Food 101 dataset and made image pre-processing to convert the images into proper size. After splitting train and test sets, we conducted AlexNet models to perform image recognition. The accuracy of the AlexNet model is 52.6%, which is better than the result of original paper, 50.67%. After predicting the food class from image recognition, we got the nutrition and calorie facts of the food from FatScret Platform API and showed the information to people.
-
-### Lessons learned
-
-
 
 ### Future work - continuations or improvements
 
