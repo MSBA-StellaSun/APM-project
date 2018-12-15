@@ -407,7 +407,7 @@ Users are able to see the following picture:
 
 More features could be realized by app developers, discussed in session 8 "future work".
 
-To watch a short demo, please click[here](https://youtu.be/sPo7R0-x4xI)
+To watch a short demo, please click [here](https://youtu.be/sPo7R0-x4xI)
 ## 8. Conclusion
 ### Summarize everything above
 
