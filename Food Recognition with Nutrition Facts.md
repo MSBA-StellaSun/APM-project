@@ -21,9 +21,9 @@
 - [Data Exploration and Preprocessing](#4-data-exploration-and-preprocessing)
   - Feature engineering/selection
   - Relevant Plots
-- [Learning/Modeling](#5-Learning/Modeling)
+- [Learning/Modeling](#5-Learning-Modeling)
   - Chosen models and why
-  - Training methods (validation, parameter selection)
+  - Training methods
   - Other design choices
 - [Results](#6-Results)
   - Model Performance
@@ -31,10 +31,9 @@
   - FatSecret Platform API
 - [Conclusion](#8-Conclusion)
   - Summarize everything above
-  - Lessons learned
   - Future work - continuations or improvements
 - [References](#9-References)
-  - Relevant project links (i.e. Github, Bitbucket, etc…)
+  - Relevant project links
 
 ## 1. Abstract
 Food provides our bodies with the energy, protein, essential fats, vitamins and minerals to live, grow and function properly. People use different methods to determine how many nutrition they need and control the amount by daily intake. An accurate and convenient solution to food nutrition measurement is the key to long-term health plan. In this project, we propose an assistive food nutrition measurement model which could recognize food and provide nutrition information automatically. In order to identify the food accurately, we use deep convolutional neural networks to classify 101,000 high-quality food images for model training. The proposed methodology and measurements of the proposed model are also described below.
@@ -306,7 +305,7 @@ if __name__ == "__main__":
 ## 5. Learning/Modeling
 ### Chosen models and why
   Since one of our teammates has a NVIDIA 1070TI GPU, we decide to perform all the CNN model training on her computer. Therefore, finding the balance of reasonable running time and model accuracy is the key to success in our project. We start with two pre-trained CNN models called AlexNet and ResNet, which are suitable for large color-images. AlexNet, the winner of Imagenet ILSVRC 2012, has a good performance with only right layers; ResNet launched in 2016, has very deep networks therefore hard to train. As result, AlexNet takes approximately 30 epochs to converge but ResNet needs more than 100. The running time of ResNet is about three times of AlexNet but the initial accuracies are both close to 48%. Therefore, for the scope of time in this project, we decide to focus more on AlexNet.
-### Training methods (validation, parameter selection)
+### Training methods 
   Like majority of others which are also doing image recognition project, we use TensorFlow as the backend. Another handy package we applied is TfLearn, which is a higher-level API for TensorFlow. If someone only wants to solve a high-level vision problem with neural network, using TfLearn can significantly reduce lines of code in the model. The basic model setting is a 3x3 kernel in all convolutional layers. For the max pooling we use a pool size of 2x2. We use relu and tanh activation functions between each layer and a softmax activation function for the last layer. Since it is a classification problem, our loss function is categorical cross-entropy. Besides of pre-trained models and hyper-parameters, we also perform a lot of modifications. We add data augmentation to increase value to base set. Image blur, four-direction flip, different angles rotation are all applied in our model. 
 ```python
     image_aug = ImageAugmentation()
@@ -413,10 +412,6 @@ To watch a short demo, please click [here](https://youtu.be/sPo7R0-x4xI)
 
 We aggregated image data from Food 101 dataset and made image pre-processing to convert the images into proper size. After splitting train and test sets, we conducted AlexNet models to perform image recognition. The accuracy of the AlexNet model is 52.6%, which is better than the result of original paper, 50.67%. After predicting the food class from image recognition, we got the nutrition and calorie facts of the food from FatScret Platform API and showed the information to people.
 
-### Lessons learned
-
-
-
 ### Future work - continuations or improvements
 
 Ensemble learning algorithm can be used for future work. Ensemble method combines multiple models to obtain better predictive performance. 
@@ -432,37 +427,4 @@ In addition, FatSecret API could not only provide nutrition information, but als
 [2] Bossard, L., Guillaumin, M., & Van Gool, L. (2014, September). Food-101–mining discriminative components with random forests. In European Conference on Computer Vision (pp. 446-461). Springer, Cham. Retrieved from https://www.vision.ee.ethz.ch/datasets_extra/food-101/ 
 
 [3] Simayijiang, Z., & Grimm, S. Segmentation with Graph Cuts. Matematikcentrum Lunds Universitet.[Online]. Available: http://www.maths.lth.se/matematiklth/personal/petter/rapporter/graph. pdf.[Diakses 8 Mei 2017].  
-(should have more references here)
 
-
-  
-(Below are from his blog requirement)  
-Relevant project links (i.e. Github, Bitbucket, etc…)
-
-    General Tips:
-    In general, imagine your audience has a basic understanding of machine learning concepts, but is likely far from an expert. It should be an easier read than most academic research papers.
-    Key code snippets can be helpful for people trying to understand how you implemented your project.
-    Be sure to include images, gifs, or short videos. These will help liven up your post, make it more attractive to readers, and give you an opportunity to flex your data visualization skills. 
-    Plenty of good examples can be found on Medium on TowardsDataScience.
-    Make sure your writing is fluid and grammatically correct. 
-
-    Evaluation Criteria include: 
-    Clear description of project goals (and business relevance if applicable)
-    Approach to pre-processing of data and feature extraction, the choice of data mining models used (and rationale for these choices)
-    New theory/math (if applicable, most projects won’t have this component)
-    Intelligent selection and tuning of models, addressing overfitting vs underfitting
-    Novelty of approach/method/algorithm (if applicable)
-    Presentation and evaluation of results
-    Replicability of the results (is the description such that someone well versed in the art can obtain similar results on the same data?)
-    Insights obtained from the effort
-    Potential business impact or how the results can be “actioned upon” (if applicable)
-    Appropriate/relevant reference list
-    Quality of the writing (grammar and style)
-    Visuals to aid in understanding of project elements 
-
-Examples:  
-https://towardsdatascience.com/automatic-speaker-recognition-using-transfer-learning-6fab63e34e74
-https://towardsdatascience.com/predict-the-number-of-likes-on-instagram-a7ec5c020203
-https://towardsdatascience.com/youtube-views-predictor-9ec573090acb
-https://towardsdatascience.com/a-data-science-for-good-machine-learning-project-walk-through-in-python-part-one-1977dd701dbc
-https://towardsdatascience.com/predicting-school-performance-with-census-income-data-ad3d8792ac97
