@@ -428,3 +428,21 @@ In addition, FatSecret API could not only provide nutrition information, but als
 
 [3] Simayijiang, Z., & Grimm, S. Segmentation with Graph Cuts. Matematikcentrum Lunds Universitet.[Online]. Available: http://www.maths.lth.se/matematiklth/personal/petter/rapporter/graph. pdf.[Diakses 8 Mei 2017].  
 
+The Github pages we used as references are as followed:
+
+https://github.com/stratospark/food-101-keras 
+
+https://github.com/JorgeCeja/food101-tensorflow 
+
+https://github.com/vidhur2k/FoodNet 
+
+https://www.kaggle.com/josephmiguel/vgg16-re-trained-model-78-accuracy/notebook 
+
+https://github.com/jubins/DeepLearning-Food-Image-Recognition-And-Calorie-Estimation
+
+https://github.com/NELSONZHAO/zhihu/blob/master/cifar_cnn/CIFAR-CNN.ipynb 
+
+https://segmentfault.com/a/1190000014583106 
+
+
+
