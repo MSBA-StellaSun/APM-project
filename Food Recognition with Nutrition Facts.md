@@ -12,7 +12,7 @@
 - [Introduction and Background](#2-introduction-and-background)
   - Project Goal and Why we care
   - Related work
-  - Outline of approach and rationale (high level)
+  - Outline of approach and rationale
   - Contributions or novel characteristics of project
 - [Data Collection and Description](#3-data-collection-and-description)
   - Source
