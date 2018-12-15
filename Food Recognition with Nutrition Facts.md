@@ -318,11 +318,6 @@ if __name__ == "__main__":
   We also add more dropouts into conventional layers to prevent overfitting. Instead of local response normalization, we use batch normalization to improve performance and stability. We replace the optimizer from SGD to an advanced stochastic optimizer called Adam. In addition, we tune other numerical parameters like increasing the number of epochs to 100 to improve the accuracy. 
   The code for modeling can be found [here](https://github.com/MSBA-StellaSun/APM-project/blob/master/model.py). 
 
-### Other design choices
-As mentioned above, we used NVIDIA 1070TI GPU to run the model. In order to go "deeper", however, we need to obtain a faster environment. Google Cloud Platform, in this case, is a useful tool to proceed further studies and designs of our model. Some tips for using GCP: 
- * Google SDK is a useful shell to upload your dataset from your local computer to the instances used to run the model.
- * Some errors shows, for example, "You've reached your limit of 0 GPUs NVIDIA K80". You need to edit your quotas to increase the GPU limit and wait for it to be approved.
- * Don't forget to stop your instances!
 ## 6. Results
 ### Model Performance
 After running 60 epochs, our model begins to converge. We run 100 epochs to make the result more accurate and evaluate once every 5 epochs. The final accuracy of AlexNet model is 52.63%. This model outperforms the random forest model from original paper, which achieving highest accuracy of 50.76%.
@@ -414,6 +409,12 @@ To watch a short demo, please click [here](https://youtu.be/sPo7R0-x4xI)
 ### Summarize everything above
 
 We aggregated image data from Food 101 dataset and made image pre-processing to convert the images into proper size. After splitting train and test sets, we conducted AlexNet models to perform image recognition. The accuracy of the AlexNet model is 52.6%, which is better than the result of original paper, 50.67%. After predicting the food class from image recognition, we got the nutrition and calorie facts of the food from FatScret Platform API and showed the information to people.
+
+### Google Could Platform 
+As mentioned above, we used NVIDIA 1070TI GPU to run the model. In order to go "deeper", however, we need to obtain a faster environment. Google Cloud Platform, in this case, is a useful tool to proceed further studies and designs of our model. Some tips for using GCP: 
+ * Google SDK is a useful shell to upload your dataset from your local computer to the instances used to run the model.
+ * Some errors shows, for example, "You've reached your limit of 0 GPUs NVIDIA K80". You need to edit your quotas to increase the GPU limit and wait for it to be approved.
+ * Don't forget to stop your instances!
 
 ### Future work - continuations or improvements
 
