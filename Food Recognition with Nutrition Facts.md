@@ -21,7 +21,7 @@
 - [Data Exploration and Preprocessing](#4-data-exploration-and-preprocessing)
   - Feature engineering/selection
   - Relevant Plots
-- [Learning/Modeling](#5-learning-modeling)
+- [Learning/Modeling](#5-learning-and-modeling)
   - Chosen models and why
   - Training methods
   - Other design choices
@@ -302,7 +302,7 @@ if __name__ == "__main__":
   
   The data preprocessing python code is uploaded [here](https://github.com/MSBA-StellaSun/APM-project/blob/master/preprocessing.py).
   
-## 5. Learning/Modeling
+## 5. Learning and Modeling
 ### Chosen models and why
   Since one of our teammates has a NVIDIA 1070TI GPU, we decide to perform all the CNN model training on her computer. Therefore, finding the balance of reasonable running time and model accuracy is the key to success in our project. We start with two pre-trained CNN models called AlexNet and ResNet, which are suitable for large color-images. AlexNet, the winner of Imagenet ILSVRC 2012, has a good performance with only right layers; ResNet launched in 2016, has very deep networks therefore hard to train. As result, AlexNet takes approximately 30 epochs to converge but ResNet needs more than 100. The running time of ResNet is about three times of AlexNet but the initial accuracies are both close to 48%. Therefore, for the scope of time in this project, we decide to focus more on AlexNet.
 ### Training methods 
